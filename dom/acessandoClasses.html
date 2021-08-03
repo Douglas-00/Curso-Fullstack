@@ -4,7 +4,7 @@
 <head>
     <meta charset='UTF-8'>
     <title>Acessando Classes</title>
-    <link rel='stylesheet' href='css/estilo.css'>
+    <link rel='stylesheet' href='domcss/estilod.css'>
 </head>
 
 <body class='conteudo exercicio'>
@@ -12,7 +12,17 @@
         Classes
     </div>
     <script>
-        // ...
+       const classes = document.querySelector('div').classList
+       classes.add('destaque')//vai marcar o atributo
+       classes.remove('destaque')//remove marcacao
+       classes.toggle('destaque')//alternacia entre adicionado ou não
+       console.log(classes.contains('destaque'))
+       console.log(classes.length)
+       classes.toggle('destaque')
+       console.log(classes.lenght)
+       classes.add('destaque1')
+       
+        
     </script>
 </body>
 

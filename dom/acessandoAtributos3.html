@@ -4,7 +4,7 @@
 <head>
     <meta charset='UTF-8'>
     <title>Acessando Atributos #03</title>
-    <link rel='stylesheet' href='css/estilo.css'>
+    <link rel='stylesheet' href='domcss/estilod.css'>
 </head>
 
 <body class='conteudo exercicio'>
@@ -16,7 +16,14 @@
         </ul>
     </div>
     <script>
-        // ...
+        const lista = document.querySelector('#compras')
+
+        //somente leitura
+        console.log(lista.attributes)
+        console.log(lista.attributes[0])
+        console.log(lista.attributes.destino)
+        console.log(lista.attributes['data-urgencia'])
+        console.log(lista.attributes[2])
     </script>
 </body>
 

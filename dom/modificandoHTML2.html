@@ -4,7 +4,7 @@
 <head>
     <meta charset='UTF-8'>
     <title>Modificando HTML #02</title>
-    <link rel='stylesheet' href='css/estilo.css'>
+    <link rel='stylesheet' href='domcss/estilod.css'>
 </head>
 
 <body class='conteudo exercicio'>
@@ -12,7 +12,17 @@
         <p>Texto Inicial</p>
     </div>
     <script>
-        // ...
+        const div = document.querySelector('div')
+        div.innerHTML = 'Texto Alterado'
+        //div.outerHTML = 'Texto alterado'
+
+        div.insertAdjacentHTML('beforebegin', '<p>Antes Inicio</p>')
+        div.insertAdjacentHTML('afterbegin', '<p>Depois InIcio </p>')
+        div.insertAdjacentHTML('beforeend', '<p>Depois fim </p>')
+        div.insertAdjacentHTML('afterend', '<p>Depois fim </p>')
+
+
+
     </script>
 </body>
 

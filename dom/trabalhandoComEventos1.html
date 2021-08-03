@@ -9,9 +9,26 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        
+        <!--onclick="navegarEm5s(event)"-->
+        <a esperar-um-pouco href="https://google.com.br" >Google</a>
     </div>
     <script>
-        // ...
+        function navegarEm5s (e){
+            e.preventDefault()
+            console.log('Saindo em 5s')
+            setTimeout(() =>{ //Determina um tempo
+                const link = e.target
+                window.location.href = e.target.href
+            },5000)
+        }
+//////////////////////////////////////////////////////////////////////
+///////////////SEGUNDA OPÇÃO/////////////////////////////////////////
+        //const a = document.querySelector('a')
+        //a.onclick = navegarEm5s
+//////////////////////////////////////////////////////////////////////
+///////////////TERCEIRA OPÇÃO/////////////////////////////////////////
+        const a = document.querySelector('[esperar-um-pouco]')
+        a.onclick = navegarEm5s
     </script>
 </body>
